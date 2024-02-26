@@ -15,7 +15,7 @@ export class Course {
     @ApiModelProperty({ description: '课程名称' })
     //装饰他的属性
     @prop()
-    name: String
+    name: string
     //定义每一个属性的名字以及示例值
     @ApiModelProperty({ description: '封面图' })
     @prop()

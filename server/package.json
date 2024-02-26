@@ -27,6 +27,7 @@
     "@typegoose/typegoose": "^6.1.1",
     "@types/mongoose": "^5.5.30",
     "mongoose": "^5.7.9",
+    "multer-aliyun-oss": "^2.1.1",
     "nestjs-mongoose-crud": "^1.1.4",
     "nestjs-typegoose": "^7.0.0",
     "reflect-metadata": "^0.1.13",

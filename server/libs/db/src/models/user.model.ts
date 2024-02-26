@@ -14,7 +14,7 @@ export class User {
     @ApiModelProperty({ description: '用户名', example: 'user1' })
     //装饰他的属性
     @prop()
-    userName: String
+    userName: string
     //定义每一个属性的名字以及示例值
     @ApiModelProperty({ description: '密码', example: 'pass1' })
     @prop()
