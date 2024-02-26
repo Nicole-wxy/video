@@ -12,10 +12,10 @@ const MAO = require('multer-aliyun-oss');
     MulterModule.register({
       storage: MAO({
         config: {
-            region: 'oss-cn-hangzhou',
-            accessKeyId: 'LTAI5tHPeKkLEKn9HexpuwhC',
-            accessKeySecret: '8PZNarmZBGExMXp8OQkF4yJw3Se6QV',
-            bucket: 'nicoledata',
+            region: '',
+            accessKeyId: '',
+            accessKeySecret: '',
+            bucket: '',
         },
         // to set path prefix for files, could be string or function
         destination: ''

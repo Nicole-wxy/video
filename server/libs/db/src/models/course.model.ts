@@ -20,8 +20,8 @@ export class Course {
     @ApiModelProperty({ description: '封面图' })
     @prop()
     cover: string
-    //由于课时是数组
-    @arrayProp({ itemsRef: 'Episode' })
-    //参考的类型（Episode模型）
-    episodes: Ref<Episode>[]
+    // //由于课时是数组
+    // @arrayProp({ itemsRef: 'Episode' })
+    // //参考的类型（Episode模型）
+    // episodes: Ref<Episode>[]
 }

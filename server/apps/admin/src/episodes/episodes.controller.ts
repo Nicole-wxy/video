@@ -19,7 +19,8 @@ export class EpisodesController {
         return {
             title: "课时管理",
             column: [
-                { prop: "name", label: "课时名称" },
+                { prop: "course", label: "所属课程", type: "select",row:true },
+                { prop: "name", label: "课时名称",span:24 },
                 // { prop: "cover", label: "课程封面图" }
             ]
         }
