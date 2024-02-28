@@ -11,11 +11,16 @@ const models = TypegooseModule.forFeature([User, Course, Episode])
 @Global()
 @Module({
   imports: [
-    TypegooseModule.forRoot('mongodb://localhost/topfullstack', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false
+    TypegooseModule.forRootAsync({
+      useFactory() {
+        return {
+          uri: process.env.DB,
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+          useCreateIndex: true,
+          useFindAndModify: false
+        }
+      }
     }),
     //导入这些模型
     models
