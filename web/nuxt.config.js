@@ -1,5 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
-import dotenv from'dotenv'
+import dotenv from 'dotenv'
 dotenv.config()
 export default {
   mode: 'universal',
@@ -20,7 +20,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Material+Icons'}
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Material+Icons'
+      }
     ]
   },
   /*
@@ -49,10 +52,22 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    '@nuxtjs/auth',
+    // '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
   ],
+  auth: {
+    strategies: {
+      local:{
+        endpoints: {
+          login: { url: '/auth/login' },
+          logout: { url: '/auth/logout' },
+          user: { url: '/auth/user',propertyName:false }
+        }
+      }
+    }
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

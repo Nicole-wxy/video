@@ -15,7 +15,7 @@
           </v-card-subtitle>
 
           <v-card-actions>
-            <v-btn text>Share</v-btn>
+            <like-btn></like-btn>
             <v-btn color="purple" text>
               Explore
             </v-btn>
@@ -29,15 +29,16 @@
 </template>
 
 <script>
+import LikeBtn from '../../components/LikeBtn.vue'
 export default {
+  components: {
+    LikeBtn
+  },
   async asyncData({ $axios }) {
     const data = await $axios.$get('/courses')
     return {
       courses: data.data
     }
-  },
-  data: () => ({
-    show: false
-  })
+  }
 }
 </script>
