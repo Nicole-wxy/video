@@ -1,5 +1,6 @@
 <template>
   <div class="pa-3">
+    <like-btn type="Course" :object="course._id"></like-btn>
     <h3>{{ course.name }}</h3>
     <v-select
       v-model="currentIndex"
@@ -10,7 +11,11 @@
 </template>
 
 <script>
+import LikeBtn from '../../components/LikeBtn.vue'
 export default {
+  components: {
+    LikeBtn
+  },
   async asyncData({ $axios, params }) {
     const { id } = params
     const course = await $axios.$get(`courses/${id}`, {

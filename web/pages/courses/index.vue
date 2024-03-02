@@ -3,9 +3,10 @@
     <h3>热门课程</h3>
     <v-row>
       <v-col v-for="item in courses" :key="item._id" md="4">
-        <v-card :to="`/courses/${item._id}`" class="mx-auto" max-width="344">
-          <v-img :src="item.cover" height="200px" cover></v-img>
-
+        <v-card class="mx-auto" max-width="344">
+          <router-link :to="`/courses/${item._id}`">
+            <v-img :src="item.cover" height="200px" cover></v-img>
+          </router-link>
           <v-card-title>
             {{ item.name }}
           </v-card-title>
@@ -15,7 +16,7 @@
           </v-card-subtitle>
 
           <v-card-actions>
-            <like-btn></like-btn>
+            <like-btn type="Course" :object="item._id"></like-btn>
             <v-btn color="purple" text>
               Explore
             </v-btn>
