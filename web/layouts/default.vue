@@ -48,12 +48,12 @@
           </v-list-item-title>
         </v-list-item>
         <v-list-item link>
-          <v-list-action>
+          <v-list-item-action>
             <v-icon color="grey darken-1">mdi-settings</v-icon>
-          </v-list-action>
-          <v-list-title class="grey--text text--darken-1">
+          </v-list-item-action>
+          <v-list-item-title class="grey--text text--darken-1">
             Manage Subscriptions
-          </v-list-title>
+          </v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -83,7 +83,7 @@
     <v-content>
       <nuxt-child />
     </v-content>
-    <v-bottom-sheet inset v-model="isShowLoginForm">
+    <v-bottom-sheet v-model="isShowLoginForm" inset>
       <v-form class="pa-4" @submit.prevent="login">
         <v-text-field v-model="loginModel.username" label="用户名">
         </v-text-field>
@@ -102,9 +102,9 @@
 
 <script>
 export default {
-  props: {
-    source: String
-  },
+  // props: {
+  //   source: String
+  // },
   data: () => ({
     isShowLoginForm: false,
     loginModel: {},

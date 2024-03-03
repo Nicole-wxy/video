@@ -1,5 +1,5 @@
 <template>
-  <v-btn :color="status ? 'pink' : null" @click="toggle" icon>
+  <v-btn icon :color="status ? 'pink' : null" @click="toggle">
     <v-icon>mdi-heart</v-icon>
   </v-btn>
 </template>
@@ -9,11 +9,11 @@ export default {
   props: {
     type: {
       type: String,
-      requierd: true
+      required: true
     },
     object: {
       type: String,
-      requierd: true
+      required: true
     }
   },
   data() {
